@@ -1,0 +1,10 @@
+// Palindrome Check
+
+function isPalindromeIgnoreCase(str) {
+  const clean = str.toLowerCase();
+  return clean === clean.split('').reverse().join('');
+}
+
+console.log(isPalindromeIgnoreCase('Madam'));     // true
+console.log(isPalindromeIgnoreCase('RaceCar'));   // true
+console.log(isPalindromeIgnoreCase('Hello'));     // false
