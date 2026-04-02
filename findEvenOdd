@@ -1,0 +1,19 @@
+// Finding even and odd element.
+
+
+
+let arr =[1,5,7,9,3,2,8]
+
+function findEvenOdd(val){
+    let even = [];
+    let odd = [];
+    for(let i=0;i<=val.length-1;i++){
+        if(val[i] % 2 ===0){
+            even.push(val[i])
+        }else{
+            odd.push(val[i])
+        }
+    }
+    return {evenElement: even, oddElement: odd}
+}
+console.log(findEvenOdd(arr))
