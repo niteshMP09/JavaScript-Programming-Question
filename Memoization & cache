@@ -1,0 +1,21 @@
+// Memoization 
+
+const cache = {};
+function calculation(a, b) {
+  console.log("calling");
+  let result = a + b;
+  return result;
+}
+
+function memory(a, b) {
+  const key = a + ":" + b;
+  if (!cache[key]) {
+    const result = calculation(a, b);
+    cache[key] = result;
+    return result;
+  } else {
+    return cache[key];
+  }
+}
+
+console.log(memory(5, 6));
