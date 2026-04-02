@@ -1,0 +1,14 @@
+// Finding largest element.
+
+let arr =[1,5,7,9,3]
+
+function findLargest(val){
+    let firstLargest = val[0]
+    for(let i=0;i<=val.length-1;i++){
+        if(val[i]>firstLargest){
+            firstLargest = val[i]
+        }
+    }
+    return firstLargest
+}
+console.log(findLargest(arr))
