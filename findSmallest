@@ -1,0 +1,14 @@
+// Finding smallest element.
+
+let arr =[1,5,7,9,3]
+
+function findSmallest(val){
+    let firstSmallest = val[0]
+    for(let i=0;i<=val.length-1;i++){
+        if(val[i]<firstSmallest){
+            firstSmallest = val[i]
+        }
+    }
+    return firstSmallest
+}
+console.log(findSmallest(arr))
