@@ -1,0 +1,19 @@
+// Frequency of element
+
+function countOccurrences(arr) {
+  const counts = {};
+  for (const num of arr) {
+    if (counts[num]) {
+      counts[num] = counts[num] + 1;
+    } else {
+      counts[num] = 1;
+    }
+  }
+  return counts;
+}
+
+// Example usage
+const arr = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4];
+const counts = countOccurrences(arr);
+
+console.log(counts); // { '2': 5, '4': 1, '5': 3, '9': 1 }
