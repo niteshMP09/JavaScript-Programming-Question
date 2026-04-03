@@ -1,0 +1,17 @@
+function ElementWithCount(val) {
+    let count = 1;
+    let result = "";
+
+    for (let i = 0; i < val.length; i++) {
+        if (val[i] === val[i + 1]) {
+            count++;
+        } else {
+            result += val[i] + count;
+            count = 1;
+        }
+    }
+
+    return result;
+}
+
+console.log(ElementWithCount("aaabbbbaccddcab"));
