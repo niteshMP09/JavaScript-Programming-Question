@@ -19,3 +19,31 @@ function mostRepeatedElement(arr){
     }
 }
 console.log(mostRepeatedElement([1,5,4,8,2,6,1,1,6,2,2,2,1]))
+
+
+
+-------------------------------------------------------------------------------
+
+
+function mostRepeatedElement(arr){
+    let countObj = {};
+    let maxCount = 0;
+    let maxRepeatedNumber = null;
+    
+    for(let i=0; i< arr.length; i++){
+        let num = arr[i];
+        if(countObj[num]){
+            countObj[num] += 1
+        }else{
+            countObj[num] = 1
+        }
+        if(countObj[num] > maxCount){
+            maxCount = countObj[num];
+            maxRepeatedNumber = num
+        }
+    }
+    return {
+        "maxCount":maxCount,
+        "maxRepeatedNumber": maxRepeatedNumber
+    }
+}
