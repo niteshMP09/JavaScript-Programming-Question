@@ -1,0 +1,13 @@
+function MovingOneLast(arr){
+   let one = [];
+   let other = [];
+   for(let i=0; i<arr.length; i++){
+       if(arr[i] === 1 ){
+           one.push(arr[i])
+       }else{
+           other.push(arr[i])
+       }
+   }
+    return [...other,...one]
+}
+console.log(MovingOneLast([1,5,4,8,2,6,1,1,6,2,2,2,1,2,1,1]))
