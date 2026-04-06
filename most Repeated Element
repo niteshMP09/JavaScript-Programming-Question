@@ -1,0 +1,21 @@
+function mostRepeatedElement(arr){
+    let maxCount = 0;
+    let mostRepeatableElement = null;
+    for(let i=0; i< arr.length; i++){
+        let count = 0;
+        for(let j=0;j < arr.length; j++){
+            if(arr[i] == arr[j]){
+                count++
+            }
+        }
+        if(count > maxCount){
+            maxCount = count
+            mostRepeatableElement = arr[i]
+        }
+    }
+    return {
+        "mostRepeatableElement": mostRepeatableElement,
+        "maxCount" : maxCount
+    }
+}
+console.log(mostRepeatedElement([1,5,4,8,2,6,1,1,6,2,2,2,1]))
