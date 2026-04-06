@@ -21,3 +21,21 @@ function flattenArray(arr) {
 // Example usage
 const nestedArray = [1, [2, 3], [4, [5, 6, [4, 8, 9, [8, 9, 123]]]]];
 console.log(flattenArray(nestedArray)); // [1, 2, 3, 4, 5, 6]
+
+
+----------------------------------------------------------------------------------
+
+
+function flattenArr(arr){
+    let resultArr = [];
+    for(let i=0;i<arr.length;i++){
+        if(typeof(arr[i])== 'number') {
+            resultArr.push(arr[i])
+        }else{
+          resultArr.push(...flattenArr(arr[i]))
+        }
+    }
+    return resultArr
+}
+
+console.log(flattenArr([1,4,[5,6,[5,9],[4,5,6,[5,98],8],96,41],2]))
