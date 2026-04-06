@@ -1,0 +1,53 @@
+In JavaScript, you can swap two values in multiple ways.
+
+let a = 10;
+let b = 20;
+
+// swap
+[a, b] = [b, a];
+
+console.log(a); // 20
+console.log(b); // 10
+
+-----------------------------------------------------------------------------------------
+
+This is the modern and easiest way using array destructuring.
+
+Other ways:
+
+let a = 10;
+let b = 20;
+
+let temp = a;
+a = b;
+b = temp;
+
+console.log(a); // 20
+console.log(b); // 10
+
+-------------------------------------------------------------------------------------------
+
+For strings:
+
+let first = "hello";
+let second = "world";
+
+[first, second] = [second, first];
+
+console.log(first);  // world
+console.log(second); // hello
+
+
+--------------------------------------------------------------------------------------------
+
+
+If a and b are declared with const, you cannot swap them because const variables cannot be reassigned.
+
+const a = 10;
+const b = 20;
+
+[a, b] = [b, a]; // ❌ Error
+
+You will get something like:
+
+TypeError: Assignment to constant variable.
